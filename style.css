@@ -1,225 +1,150 @@
-/* Общие стили */
-* {
+/* Основные настройки */
+body {
+    background: #1f1f2e;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #5f3fbf, #6a1b9a, #4a148c); /* Фиолетовый, бордовый, синий */
-    color: #fff;
-    line-height: 1.6;
-    font-size: 16px;
+/* Звёздное небо */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
-h1, h2 {
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 2px;
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    animation: moveStars 300s linear infinite;
 }
 
-/* Шапка */
-header {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px 0;
+/* Анимация звёздного фона */
+@keyframes moveStars {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #8a2be2; /* Легкий фиолетовый */
-    transform: scale(1.2);
-}
-
-/* Секции */
-section {
-    padding: 60px 20px;
+/* Логотип */
+.logo h1 {
+    font-size: 3em;
+    color: #5f5cfa;
     text-align: center;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Секция Обо мне */
-#about {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-#about h1 {
-    color: #fff;
-    font-size: 48px;
     margin-bottom: 20px;
 }
 
-#about p {
-    font-size: 18px;
+/* Округлённые углы и отступы для элементов */
+.card {
+    background: rgba(45, 45, 60, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Секция Социальные сети */
-#socials {
-    background-color: rgba(0, 0, 0, 0.6);
+.card h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
 }
 
-#socials h2 {
-    color: #fff;
-    font-size: 36px;
-    margin-bottom: 20px;
+.card p {
+    font-size: 1.2em;
 }
 
-#socials p {
-    font-size: 18px;
+/* Сетка проектов */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-/* Секция Проекты */
-#projects {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-#projects h2 {
-    color: #fff;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-/* Секция Контакты */
-#contact {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-#contact h2 {
-    color: #fff;
-    font-size: 36px;
-}
-
-/* Подвал */
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: center;
+.project-item {
+    background: rgba(45, 45, 60, 0.8);
+    border-radius: 15px;
     padding: 20px;
-    font-size: 14px;
-    color: #aaa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-footer p {
-    font-family: 'Russo One', sans-serif;
-    font-size: 18px;
+.project-item:hover {
+    transform: scale(1.05);
 }
 
-.footer-line {
-    height: 2px;
-    background: #8a2be2; /* Легкий фиолетовый */
+.project-item h3 {
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-/* Анимации */
-h1, h2, p {
-    opacity: 0;
-    animation: fadeIn 1.5s forwards;
+.project-item p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
-h1 {
-    animation-delay: 0.3s;
+.project-item .button {
+    background-color: #5f5cfa;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-h2 {
-    animation-delay: 0.5s;
+.project-item .button:hover {
+    background-color: #4d4ad5;
 }
 
-p {
-    animation-delay: 0.7s;
+/* Форма для контактов */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Прокрутка с эффектом */
-html {
-    scroll-behavior: smooth;
+form label {
+    margin: 10px 0 5px;
+    font-size: 1.1em;
 }
 
-/* Анимация наведения на кнопку */
-nav ul li a:hover {
-    transform: scale(1.1);
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #5f5cfa;
+    background-color: #333;
+    color: white;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    /* Шапка навигации */
-    nav ul {
-        flex-direction: column;
-        padding: 20px 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    /* Секции */
-    section {
-        padding: 40px 20px;
-    }
-
-    /* Размеры заголовков */
-    #about h1, #socials h2, #projects h2, #contact h2 {
-        font-size: 28px;
-    }
-
-    /* Уменьшение текста */
-    #about p, #socials p {
-        font-size: 16px;
-    }
-
-    /* Изменения для контейнера */
-    .container {
-        padding: 0 20px;
-    }
+form button {
+    padding: 10px 20px;
+    background-color: #5f5cfa;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-/* Более маленькие экраны (мобильные телефоны) */
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-    }
-
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    #about h1, #socials h2, #projects h2, #contact h2 {
-        font-size: 24px;
-    }
-
-    #about p, #socials p {
-        font-size: 14px;
-    }
-
-    /* Изменение отступов */
-    section {
-        padding: 30px 10px;
-    }
+form button:hover {
+    background-color: #4d4ad5;
 }
 
-/* Анимация */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+/* Общий стиль */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #222;
+    font-size: 1.2em;
 }

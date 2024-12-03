@@ -3,55 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Мой Личный Сайт</title>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@400;700&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <title>Мой сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background">
+        <!-- Анимация звездного неба -->
+        <div class="stars"></div>
+    </div>
     <header>
+        <div class="logo">
+            <h1>Optimus Gang</h1>
+        </div>
         <nav>
-            <ul>
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#socials">Социальные сети</a></li>
-                <li><a href="#projects">Проекты</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
+            <a href="#aboutMe">Обо мне</a>
+            <a href="#social">Социальные сети</a>
+            <a href="#projects">Проекты</a>
+            <a href="#skills">Навыки</a>
+            <a href="#contact">Контакты</a>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <div class="container">
-                <h1>Привет, я Даня!</h1>
-                <p>Я — разработчик, увлекаюсь программированием и создаю интересные проекты. Добро пожаловать на мой сайт!</p>
+    <div class="container">
+        <!-- Обо мне -->
+        <section id="aboutMe" class="card">
+            <h2>Обо мне</h2>
+            <p>Привет! Я — Даня. Я увлекаюсь программированием, играми и дизайном. Постоянно изучаю новые технологии и стараюсь развиваться в разных областях. Люблю учиться и делиться своими знаниями.</p>
+            <img src="https://via.placeholder.com/400x300" alt="Моя фотография" class="profile-image">
+        </section>
+
+        <!-- Социальные сети -->
+        <section id="social" class="card">
+            <h2>Социальные сети</h2>
+            <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </section>
+
+        <!-- Проекты -->
+        <section id="projects" class="card">
+            <h2>Проекты</h2>
+            <p>Здесь будут мои проекты. Постепенно добавлю ссылки на них.</p>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>Проект 1</h3>
+                    <p>Описание проекта 1. Это будет подробное описание проекта.</p>
+                    <a href="#" class="button">Перейти</a>
+                </div>
+                <div class="project-item">
+                    <h3>Проект 2</h3>
+                    <p>Описание проекта 2. Это будет подробное описание проекта.</p>
+                    <a href="#" class="button">Перейти</a>
+                </div>
+                <div class="project-item">
+                    <h3>Проект 3</h3>
+                    <p>Описание проекта 3. Это будет подробное описание проекта.</p>
+                    <a href="#" class="button">Перейти</a>
+                </div>
             </div>
         </section>
 
-        <section id="socials">
-            <div class="container">
-                <h2>Социальные сети</h2>
-                <p>Ссылки на мои социальные сети появятся здесь.</p>
-            </div>
+        <!-- Навыки -->
+        <section id="skills" class="card">
+            <h2>Мои навыки</h2>
+            <ul>
+                <li>Программирование на Python</li>
+                <li>Веб-разработка (HTML, CSS, JavaScript)</li>
+                <li>Дизайн интерфейсов</li>
+                <li>Проектирование баз данных</li>
+                <li>Работа с Git</li>
+            </ul>
         </section>
 
-        <section id="projects">
-            <div class="container">
-                <h2>Мои проекты</h2>
-                <p>Здесь будут отображаться мои лучшие проекты.</p>
-            </div>
-        </section>
+        <!-- Контакты -->
+        <section id="contact" class="card">
+            <h2>Контакты</h2>
+            <p>Если у вас есть вопросы, напишите мне!</p>
+            <form>
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Контакты</h2>
-                <p>Если вы хотите связаться со мной, используйте форму ниже:</p>
-            </div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
         </section>
-    </main>
+    </div>
 
     <footer>
-        <div class="footer-line"></div>
         <p>Optimus gang</p>
     </footer>
 
