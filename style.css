@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #4b007d, #3b0a45, #4b0082);
+    background: linear-gradient(135deg, #5f3fbf, #6a1b9a, #4a148c); /* Фиолетовый, бордовый, синий */
     color: #fff;
     line-height: 1.6;
     font-size: 16px;
@@ -43,7 +43,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #8a2be2;
+    color: #8a2be2; /* Легкий фиолетовый */
     transform: scale(1.2);
 }
 
@@ -125,7 +125,7 @@ footer p {
 
 .footer-line {
     height: 2px;
-    background: #8a2be2;
+    background: #8a2be2; /* Легкий фиолетовый */
     margin-bottom: 10px;
 }
 
@@ -157,6 +157,64 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+/* Адаптивность */
+@media (max-width: 768px) {
+    /* Шапка навигации */
+    nav ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Секции */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* Размеры заголовков */
+    #about h1, #socials h2, #projects h2, #contact h2 {
+        font-size: 28px;
+    }
+
+    /* Уменьшение текста */
+    #about p, #socials p {
+        font-size: 16px;
+    }
+
+    /* Изменения для контейнера */
+    .container {
+        padding: 0 20px;
+    }
+}
+
+/* Более маленькие экраны (мобильные телефоны) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    #about h1, #socials h2, #projects h2, #contact h2 {
+        font-size: 24px;
+    }
+
+    #about p, #socials p {
+        font-size: 14px;
+    }
+
+    /* Изменение отступов */
+    section {
+        padding: 30px 10px;
+    }
+}
+
+/* Анимация */
 @keyframes fadeIn {
     0% {
         opacity: 0;
