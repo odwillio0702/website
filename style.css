@@ -1,103 +1,40 @@
-/* Основные стили для страницы */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    height: 100%;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Видео с анимационным фоном -->
+    <div class="background-video">
+        <video autoplay muted loop id="background-video">
+            <source src="https://cdn.pixabay.com/vimeo/110790/sakura-flowers-spring-nature-japan-110790.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео тег.
+        </video>
+    </div>
 
-/* Анимация фона */
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
+    <div class="content">
+        <!-- Заголовок сайта -->
+        <header>
+            <h1>Добро пожаловать на мой сайт</h1>
+        </header>
 
-#background-video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-}
+        <!-- Кнопки для навигации -->
+        <section class="buttons">
+            <button class="btn animate">Социальные сети</button>
+            <button class="btn animate">Проекты</button>
+            <button class="btn animate">Контакты</button>
+        </section>
 
-/* Стиль для контента */
-.content {
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
+        <!-- Подвал с логотипом Optimus Gang -->
+        <footer>
+            <p class="optimus-gang">Optimus Gang</p>
+        </footer>
+    </div>
 
-/* Главный заголовок */
-header h1 {
-    font-size: 3em;
-    font-weight: bold;
-    margin: 20px 0;
-    color: #fff;
-}
-
-/* Секция с текстами */
-section {
-    margin: 40px 0;
-}
-
-/* Кнопки */
-button {
-    background-color: rgba(255, 255, 255, 0.3);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: transform 0.3s ease;
-}
-
-/* Эффект увеличения кнопок */
-button:hover {
-    transform: scale(1.1);
-}
-
-/* Стиль футера */
-footer {
-    position: fixed;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-/* Стиль текста Optimus Gang */
-.optimus-gang {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 1.8em;
-    color: #ff00cc;
-    letter-spacing: 2px;
-}
-
-/* Анимация для элементов */
-.animate {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
-
-/* Когда элемент появляется в области видимости */
-.animate.fade-in {
-    opacity: 1;
-}
-
-/* Медиазапросы для мобильных устройств */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2.5em;
-    }
-
-    .optimus-gang {
-        font-size: 1.5em;
-    }
-}
+    <script src="script.js"></script>
+</body>
+</html>

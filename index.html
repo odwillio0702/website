@@ -1,28 +1,40 @@
-// Простая анимация для появления элементов при прокрутке страницы
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Видео с анимационным фоном -->
+    <div class="background-video">
+        <video autoplay muted loop id="background-video">
+            <source src="https://cdn.pixabay.com/vimeo/110790/sakura-flowers-spring-nature-japan-110790.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео тег.
+        </video>
+    </div>
 
-// Функция для проверки, виден ли элемент на экране
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+    <div class="content">
+        <!-- Заголовок сайта -->
+        <header>
+            <h1>Добро пожаловать на мой сайт</h1>
+        </header>
 
-// Функция для добавления анимации
-function animateOnScroll() {
-    const elements = document.querySelectorAll('.animate'); // Находим все элементы с классом .animate
-    elements.forEach((el) => {
-        if (isInViewport(el)) {
-            el.classList.add('fade-in'); // Добавляем класс для анимации
-        }
-    });
-}
+        <!-- Кнопки для навигации -->
+        <section class="buttons">
+            <button class="btn animate">Социальные сети</button>
+            <button class="btn animate">Проекты</button>
+            <button class="btn animate">Контакты</button>
+        </section>
 
-// Слушаем событие прокрутки
-window.addEventListener('scroll', animateOnScroll);
+        <!-- Подвал с логотипом Optimus Gang -->
+        <footer>
+            <p class="optimus-gang">Optimus Gang</p>
+        </footer>
+    </div>
 
-// Инициализация анимации при загрузке страницы
-window.addEventListener('load', animateOnScroll);
+    <script src="script.js"></script>
+</body>
+</html>
