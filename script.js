@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('mouseover', () => {
             link.style.transform = "scale(1.1)";
             link.style.transition = "transform 0.3s ease-in-out";
-            link.style.color = "#8e7dff"; // Изменение цвета на фиолетовый
+            link.style.color = "#8e7dff"; // Фиолетовый цвет при наведении
         });
         link.addEventListener('mouseout', () => {
             link.style.transform = "scale(1)";
@@ -14,17 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Эффект появления для текста (например, заголовки)
-    const headers = document.querySelectorAll('h1, h2');
-    headers.forEach(header => {
-        header.style.opacity = 0;
-        header.style.transition = "opacity 1s ease-in-out";
-        setTimeout(() => {
-            header.style.opacity = 1;
-        }, 200);
-    });
-
-    // Плавная прокрутка при клике на навигацию
+    // Плавная прокрутка для навигации
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -33,39 +23,9 @@ window.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.getElementById(targetId);
 
             window.scrollTo({
-                top: targetElement.offsetTop - 50, // немного отступаем сверху
+                top: targetElement.offsetTop - 50,
                 behavior: 'smooth'
             });
         });
     });
-
-    // Плавная анимация кнопки при наведении
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-        button.addEventListener('mouseenter', () => {
-            button.style.transform = "scale(1.1)";
-            button.style.transition = "all 0.3s ease-in-out";
-        });
-        button.addEventListener('mouseleave', () => {
-            button.style.transform = "scale(1)";
-        });
-    });
-
-    // Взаимодействие с кнопками: пример добавления события на кнопку "Обо мне"
-    const aboutBtn = document.getElementById('about-btn');
-    if (aboutBtn) {
-        aboutBtn.addEventListener('click', () => {
-            alert("Больше информации о сайте скоро появится!");
-        });
-    }
-
-    // Дополнительная анимация для текста в footer
-    const footerText = document.querySelector('.footer-text');
-    if (footerText) {
-        footerText.style.opacity = 0;
-        footerText.style.transition = "opacity 2s ease-in-out";
-        setTimeout(() => {
-            footerText.style.opacity = 1;
-        }, 1000);
-    }
 });
