@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Анимированный фон</title>
     <style>
-        /* Убираем все отступы и поля */
         body, html {
             margin: 0;
             padding: 0;
@@ -20,7 +19,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Ставим видео на задний план */
+            z-index: -1;
+            object-fit: cover; /* Обеспечивает масштабирование видео */
         }
 
         /* Контент, который будет поверх видео */
@@ -33,17 +33,34 @@
             font-size: 2em;
             text-align: center;
             z-index: 1;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+
+        /* Стиль для анимации текста */
+        .show {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <!-- Вставка видео с YouTube как фон -->
-    <iframe class="video-background" src="https://youtu.be/Hz5Cd5G_niA?si=m0Vi8l0_1R0xJUAL" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <!-- Вставка видео как фон -->
+    <video class="video-background" autoplay muted loop>
+        <source src="https://cdn.pixabay.com/vimeo/218728343/20220626_215410-2.mp4?alt=media&token=b3e9f33f-cfcb-47c4-8772-d845e88e72f4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
 
     <!-- Контент сайта -->
-    <div class="content">
+    <div class="content" id="content">
         <h1>Привет! Это мой сайт с анимированным фоном</h1>
-        <p>Добавь сюда свой текст, изображения или другие элементы.</p>
+        <p>Тут можно добавить свой контент.</p>
     </div>
+
+    <script>
+        // Добавляем анимацию для появления текста
+        window.onload = function() {
+            document.getElementById('content').classList.add('show');
+        };
+    </script>
 </body>
 </html>
