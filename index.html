@@ -3,17 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Пустой сайт с анимированным фоном</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Анимированный фон</title>
+    <style>
+        /* Убираем все отступы и поля */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Видео, которое будет фоном */
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ставим видео на задний план */
+        }
+
+        /* Контент, который будет поверх видео */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
-    <!-- Видео с анимированным фоном -->
-    <div class="background-video">
-        <video autoplay muted loop id="background-video">
-            <source src="https://cdn.pixabay.com/vimeo/110790/sakura-flowers-spring-nature-japan-110790.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео тег.
-        </video>
+    <!-- Вставка видео с YouTube как фон -->
+    <iframe class="video-background" src="https://youtu.be/Hz5Cd5G_niA?si=m0Vi8l0_1R0xJUAL" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+    <!-- Контент сайта -->
+    <div class="content">
+        <h1>Привет! Это мой сайт с анимированным фоном</h1>
+        <p>Добавь сюда свой текст, изображения или другие элементы.</p>
     </div>
 </body>
 </html>
