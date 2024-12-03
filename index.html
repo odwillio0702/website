@@ -1,53 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой личный сайт</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Личный сайт с анимированными обоями, минималистичный стиль, плавные анимации">
+    <title>Мой Личный Сайт</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Задний фон с обоями -->
-  <div class="background"></div>
+    <!-- Фон с анимацией -->
+    <div class="background"></div>
 
-  <div class="container">
-    <!-- Шапка -->
+    <!-- Шапка сайта -->
     <header>
-      <h1>Привет, я Даня!</h1>
-      <p>Добро пожаловать на мой сайт, здесь будет много интересного!</p>
+        <div class="logo">
+            <h1>Добро пожаловать на мой сайт</h1>
+        </div>
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#socials">Социальные сети</a>
+            <a href="#projects">Проекты</a>
+        </nav>
     </header>
 
-    <!-- Навигация -->
-    <nav>
-      <ul>
-        <li><a href="#about">Обо мне</a></li>
-        <li><a href="#projects">Проекты</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
-    </nav>
-
-    <!-- Разделы -->
+    <!-- Основные секции сайта -->
     <section id="about">
-      <h2>Обо мне</h2>
-      <p>Я Даня, мне 17 лет. Мой основной интерес — программирование и дизайн.</p>
+        <h2>Обо мне</h2>
+        <p>Привет! Я Даня, увлекаюсь программированием и разработкой сайтов.</p>
+    </section>
+
+    <section id="socials">
+        <h2>Социальные сети</h2>
+        <ul>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+        </ul>
     </section>
 
     <section id="projects">
-      <h2>Проекты</h2>
-      <p>Скоро добавлю сюда свои проекты. Затягиваю процесс!</p>
+        <h2>Мои проекты</h2>
+        <p>Здесь скоро появятся мои проекты!</p>
     </section>
 
-    <section id="contact">
-      <h2>Контакты</h2>
-      <p>Напишите мне: email@example.com</p>
-    </section>
-  </div>
+    <!-- Подвал сайта -->
+    <footer>
+        <p class="footer-text">Optimus Gang</p>
+    </footer>
 
-  <!-- Подвал с "Optimus Gang" -->
-  <footer>
-    <p class="footer-text">Optimus Gang</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
