@@ -1,6 +1,6 @@
 // Генерация случайных звёзд
 window.onload = function() {
-    let numStars = 150; // Количество звёзд
+    let numStars = 200; // Количество звёзд
     let container = document.querySelector('body');
   
     for (let i = 0; i < numStars; i++) {
