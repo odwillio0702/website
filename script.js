@@ -28,3 +28,33 @@ navLinks.forEach(link => {
         });
     });
 });
+
+// Звезды на экране
+const starsContainer = document.createElement('div');
+starsContainer.classList.add('stars');
+document.body.appendChild(starsContainer);
+
+// Функция для создания случайных звезд
+function createStars() {
+  const starCount = 100; // Количество звезд
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    
+    // Позиционируем звезды случайным образом
+    const size = Math.random() * 3 + 1; // Размер звезды
+    const positionX = Math.random() * window.innerWidth;
+    const positionY = Math.random() * window.innerHeight;
+    
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.top = `${positionY}px`;
+    star.style.left = `${positionX}px`;
+    star.style.animationDuration = `${Math.random() * 1 + 1}s`;
+    
+    starsContainer.appendChild(star);
+  }
+}
+
+// Создаем звезды при загрузке страницы
+createStars();
