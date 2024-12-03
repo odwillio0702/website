@@ -3,49 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Личный сайт с анимированными обоями, минималистичный стиль, плавные анимации">
     <title>Мой Личный Сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Анимированный фон -->
-    <div class="background"></div>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="https://cdn.pixabay.com/vimeo/110790/sakura-flowers-spring-nature-japan-110790.mp4" type="video/mp4">
+        </video>
+    </div>
 
-    <!-- Шапка сайта -->
     <header>
         <div class="logo">
-            <h1>Добро пожаловать на мой сайт</h1>
+            <h1>Мой Личный Сайт</h1>
         </div>
         <nav>
-            <a href="#about">Обо мне</a>
-            <a href="#socials">Социальные сети</a>
-            <a href="#projects">Проекты</a>
+            <ul>
+                <li><a href="#about">Обо Мне</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#social">Социальные Сети</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Основные секции сайта -->
-    <section id="about">
-        <h2>Обо мне</h2>
-        <p>Привет! Я Даня, увлекаюсь программированием и разработкой сайтов.</p>
+    <section id="about" class="section">
+        <h2>Обо Мне</h2>
+        <p>Здесь будет информация обо мне.</p>
     </section>
 
-    <section id="socials">
-        <h2>Социальные сети</h2>
-        <ul>
-            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
-        </ul>
+    <section id="projects" class="section">
+        <h2>Проекты</h2>
+        <p>Здесь будет информация о моих проектах.</p>
     </section>
 
-    <section id="projects">
-        <h2>Мои проекты</h2>
-        <p>Здесь скоро появятся мои проекты!</p>
+    <section id="social" class="section">
+        <h2>Социальные Сети</h2>
+        <p>Здесь будут ссылки на мои соц. сети.</p>
     </section>
 
-    <!-- Подвал сайта -->
     <footer>
-        <p class="footer-text">Optimus Gang</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Optimus Gang</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
