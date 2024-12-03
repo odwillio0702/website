@@ -1,0 +1,81 @@
+/* Общее оформление страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1e2b; /* Темный фон */
+    color: #ffffff;
+    transition: background-color 1s ease-in-out;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #9b2d5b; /* Цвет при наведении */
+}
+
+/* Стиль для разделов */
+section {
+    padding: 50px;
+    margin: 20px 0;
+    background-color: #2d3a4f; /* Темный синий для разделов */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s ease-out;
+}
+
+section:hover {
+    background-color: #3a4751; /* Цвет при наведении */
+}
+
+/* Плавное появление элементов */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Когда элемент становится видимым */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стиль для кнопок */
+button {
+    background-color: #9b2d5b;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
