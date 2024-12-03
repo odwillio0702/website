@@ -2,77 +2,19 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background: #01042a; /* Цвет ночного неба */
-    height: 100vh;
     font-family: 'Arial', sans-serif;
+    background: #01042a; /* Цвет ночного неба */
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
   }
   
-  /* Стили для блока с контентом */
-  .container {
-    text-align: center;
-    width: 80%;
-    max-width: 1200px;
-    padding: 20px;
-  }
-  
-  /* Заголовки */
-  h1, h2 {
-    color: #fff;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  }
-  
-  /* Стили для кнопок */
-  a {
-    display: inline-block;
-    background-color: #4b3f72; /* Тёмно-фиолетовый */
-    color: #fff;
-    font-size: 1.2em;
-    padding: 15px 30px;
-    margin: 10px 20px;
-    border-radius: 50px; /* Круглые углы */
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Анимация кнопок */
-  a:hover {
-    transform: scale(1.1); /* Увеличение кнопки */
-    background-color: #6c4a8c; /* Более светлый оттенок фиолетового */
-  }
-  
-  /* Стили для навигации */
-  nav {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-  }
-  
-  nav a {
-    margin: 0 15px;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 10px;
-    text-decoration: none;
-    color: #fff;
-    border: 2px solid transparent;
-    transition: border 0.3s ease;
-  }
-  
-  /* Эффект при наведении на ссылки в меню */
-  nav a:hover {
-    border-color: #4b3f72;
-  }
-  
-  /* Эффект звездного неба */
+  /* Стили для анимации звездного неба */
   .stars {
     position: absolute;
     top: 0;
@@ -115,6 +57,82 @@ body {
     }
   }
   
+  /* Контейнер с контентом */
+  .content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Заголовки */
+  h1, h2 {
+    font-size: 3em;
+    margin: 20px 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  h1 {
+    font-size: 4em;
+  }
+  
+  /* Описание для разделов */
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #ccc;
+  }
+  
+  /* Стили для навигации */
+  nav {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+  
+  nav a {
+    margin: 0 20px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Эффект при наведении на ссылки */
+  nav a:hover {
+    transform: scale(1.1);
+    color: #6c4a8c;
+  }
+  
+  /* Стили для разделов */
+  section {
+    margin: 40px 0;
+  }
+  
+  section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  section p {
+    font-size: 1.3em;
+  }
+  
+  /* Подвал */
+  footer {
+    margin-top: 50px;
+    font-size: 1.5em;
+    color: #aaa;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 2px solid #444;
+  }
+  
+  /* Анимация звёзд */
   .star {
     position: absolute;
     border-radius: 50%;
