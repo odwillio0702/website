@@ -3,49 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой Личный Сайт</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Мой красивый сайт</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="video-background">
-        <video autoplay loop muted>
+    <!-- Задний фон (анимированное видео) -->
+    <div class="background-video">
+        <video autoplay muted loop id="background-video">
             <source src="https://cdn.pixabay.com/vimeo/110790/sakura-flowers-spring-nature-japan-110790.mp4" type="video/mp4">
         </video>
     </div>
 
-    <header>
-        <div class="logo">
-            <h1>Мой Личный Сайт</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">Обо Мне</a></li>
-                <li><a href="#projects">Проекты</a></li>
-                <li><a href="#social">Социальные Сети</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="content">
+        <!-- Главная шапка сайта -->
+        <header>
+            <h1>Добро пожаловать на мой сайт</h1>
+        </header>
 
-    <section id="about" class="section">
-        <h2>Обо Мне</h2>
-        <p>Здесь будет информация обо мне.</p>
-    </section>
+        <!-- Секцию с текстами можно сделать по твоему желанию -->
+        <section class="about">
+            <h2>Обо мне</h2>
+            <p>Здесь будет текст о тебе.</p>
+        </section>
 
-    <section id="projects" class="section">
-        <h2>Проекты</h2>
-        <p>Здесь будет информация о моих проектах.</p>
-    </section>
+        <!-- Кнопки перехода по страницам -->
+        <section class="buttons">
+            <button class="btn animate">Социальные сети</button>
+            <button class="btn animate">Проекты</button>
+            <button class="btn animate">Контакты</button>
+        </section>
 
-    <section id="social" class="section">
-        <h2>Социальные Сети</h2>
-        <p>Здесь будут ссылки на мои соц. сети.</p>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Optimus Gang</p>
-        </div>
-    </footer>
+        <!-- Надпись Optimus Gang внизу -->
+        <footer>
+            <p class="optimus-gang">Optimus Gang</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>

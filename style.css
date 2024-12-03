@@ -1,20 +1,15 @@
-/* Общие стили */
-* {
+/* Основные стили для страницы */
+body, html {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
-    color: white;
     overflow-x: hidden;
-    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
 }
 
-/* Видео фон */
-.video-background {
-    position: fixed;
+/* Анимация фона */
+.background-video {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -22,165 +17,87 @@ body {
     z-index: -1;
 }
 
-video {
+#background-video {
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    opacity: 0.8;
 }
 
-/* Шапка */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Стиль для контента */
+.content {
+    text-align: center;
+    color: white;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 100;
 }
 
-header .logo h1 {
-    font-size: 2rem;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
+/* Главный заголовок */
+header h1 {
+    font-size: 3em;
     font-weight: bold;
-    transition: color 0.3s, transform 0.3s;
+    margin: 20px 0;
+    color: #fff;
 }
 
-nav ul li a:hover {
-    color: #ff6f61;
+/* Секция с текстами */
+section {
+    margin: 40px 0;
+}
+
+/* Кнопки */
+button {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Эффект увеличения кнопок */
+button:hover {
     transform: scale(1.1);
 }
 
-/* Секции */
-.section {
-    padding: 50px;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.section p {
-    font-size: 1.2rem;
-    color: #ddd;
-}
-
-/* Footer */
+/* Стиль футера */
 footer {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
+    position: fixed;
+    bottom: 20px;
     width: 100%;
+    text-align: center;
+    font-size: 1.5em;
 }
 
-footer p {
-    font-size: 1.2rem;
-    color: #fff;
-    text-transform: uppercase;
+/* Стиль текста Optimus Gang */
+.optimus-gang {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #ff00cc;
     letter-spacing: 2px;
 }
 
-/* Анимации */
-nav ul li a {
-    transition: transform 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    transform: scale(1.1);
-}
-
-footer p {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: #ff6f61;
-}
-
-/* Мобильная адаптация */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header .logo h1 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .section h2 {
-        font-size: 2rem;
-    }
-
-    .section p {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header .logo h1 {
-        font-size: 1.2rem;
-    }
-
-    nav ul li {
-        margin: 8px 0;
-    }
-
-    .section h2 {
-        font-size: 1.8rem;
-    }
-
-    .section p {
-        font-size: 1rem;
-    }
-
-    footer p {
-        font-size: 1rem;
-    }
-}
-/* Класс для анимации */
+/* Анимация для элементов */
 .animate {
     opacity: 0;
     transition: opacity 1s ease-out;
 }
 
-/* Класс для анимации появления */
+/* Когда элемент появляется в области видимости */
 .animate.fade-in {
     opacity: 1;
 }
 
-/* Применяем анимацию к секциям */
-.section {
-    transition: opacity 0.5s ease-in-out;
+/* Медиазапросы для мобильных устройств */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .optimus-gang {
+        font-size: 1.5em;
+    }
 }
