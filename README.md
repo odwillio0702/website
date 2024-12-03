@@ -1,2 +1,2 @@
 # website
-thats my first poject
+just a site for practice
