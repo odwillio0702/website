@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Мой личный сайт, проекты и социальные сети">
+    <meta name="description" content="Личный сайт, проекты и социальные сети. Оптимус Ганг.">
     <title>Optimus Gang - Личный сайт</title>
+    <!-- Подключение шрифта для "Optimus Gang" -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Фон с анимацией -->
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
+    <!-- Звездное небо с анимацией -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
 
-    <!-- Контейнер сайта -->
+    <!-- Контейнер с контентом -->
     <div class="container">
+        <!-- Шапка сайта -->
         <header>
-            <h1>Добро пожаловать на мой сайт</h1>
-            <p class="subtitle">Здесь собраны мои проекты, ссылки на соцсети и многое другое.</p>
+            <h1>Добро пожаловать на мой сайт!</h1>
+            <p>Здесь можно узнать обо мне, моих проектах и социальных сетях.</p>
         </header>
 
-        <!-- Навигационное меню -->
+        <!-- Навигация -->
         <nav>
             <ul>
                 <li><a href="#about">Обо мне</a></li>
@@ -33,13 +36,12 @@
         <!-- Раздел "Обо мне" -->
         <section id="about" class="section">
             <h2>Обо мне</h2>
-            <p>Я — разработчик и энтузиаст в мире технологий. Мой путь в программировании начался с интереса к веб-разработке...</p>
+            <p>Я — разработчик и увлечённый техникой человек. Мой путь в программировании начался с веб-разработки...</p>
         </section>
 
         <!-- Раздел "Социальные сети" -->
         <section id="socials" class="section">
             <h2>Мои социальные сети</h2>
-            <p>Вот мои ссылки, следите за обновлениями!</p>
             <ul class="social-links">
                 <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
                 <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
@@ -50,19 +52,18 @@
         <!-- Раздел "Проекты" -->
         <section id="projects" class="section">
             <h2>Мои проекты</h2>
-            <p>Здесь собраны мои проекты, которые я разработал и которым горжусь.</p>
             <ul class="project-list">
                 <li><a href="#">Проект 1</a></li>
                 <li><a href="#">Проект 2</a></li>
                 <li><a href="#">Проект 3</a></li>
             </ul>
         </section>
-
-        <!-- Подвал -->
-        <footer>
-            <p>&copy; 2024 Optimus Gang. Все права защищены.</p>
-        </footer>
     </div>
+
+    <!-- Подвал с Optimus Gang -->
+    <footer>
+        <p class="footer-text">Optimus Gang</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
