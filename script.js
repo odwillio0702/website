@@ -59,3 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Добавляем обработчик для события прокрутки, чтобы анимация срабатывала при прокрутке страницы
 window.addEventListener('scroll', fadeInOnScroll);
+// Сценарий для добавления анимации появления элементов на странице
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.classList.add('fade-in');
+    });
+});
+

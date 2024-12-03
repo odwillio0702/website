@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Мой Личный Сайт</title>
-    <link rel="stylesheet" href="style.css"> <!-- Ссылка на файл стилей -->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto:wght@400;700&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Навигация -->
-    <nav>
-        <ul>
-            <li><a href="#about" class="nav-link">Обо мне</a></li>
-            <li><a href="#projects" class="nav-link">Проекты</a></li>
-            <li><a href="#contact" class="nav-link">Контакты</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#socials">Социальные сети</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Раздел: Обо мне -->
-    <section id="about" class="fade-in">
-        <h2>Обо мне</h2>
-        <p>Привет! Я разработчик, увлечённый созданием красивых и удобных сайтов. Я люблю решать сложные задачи и
-            работать с различными технологиями.</p>
-    </section>
+    <main>
+        <section id="about">
+            <div class="container">
+                <h1>Привет, я Даня!</h1>
+                <p>Я — разработчик, увлекаюсь программированием и создаю интересные проекты. Добро пожаловать на мой сайт!</p>
+            </div>
+        </section>
 
-    <!-- Раздел: Проекты -->
-    <section id="projects" class="fade-in">
-        <h2>Мои проекты</h2>
-        <p>Вот некоторые из моих проектов:</p>
-        <ul>
-            <li>Проект 1</li>
-            <li>Проект 2</li>
-            <li>Проект 3</li>
-        </ul>
-    </section>
+        <section id="socials">
+            <div class="container">
+                <h2>Социальные сети</h2>
+                <p>Ссылки на мои социальные сети появятся здесь.</p>
+            </div>
+        </section>
 
-    <!-- Раздел: Контакты -->
-    <section id="contact" class="fade-in">
-        <h2>Контакты</h2>
-        <p>Вы можете связаться со мной через:</p>
-        <ul>
-            <li>Email: example@example.com</li>
-            <li>Телефон: +1234567890</li>
-        </ul>
-    </section>
+        <section id="projects">
+            <div class="container">
+                <h2>Мои проекты</h2>
+                <p>Здесь будут отображаться мои лучшие проекты.</p>
+            </div>
+        </section>
 
-    <script src="script.js"></script> <!-- Подключаем JavaScript -->
+        <section id="contact">
+            <div class="container">
+                <h2>Контакты</h2>
+                <p>Если вы хотите связаться со мной, используйте форму ниже:</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-line"></div>
+        <p>Optimus gang</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>

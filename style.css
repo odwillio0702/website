@@ -1,81 +1,167 @@
-/* Общее оформление страницы */
-body {
-    font-family: 'Arial', sans-serif;
+/* Общие стили */
+* {
     margin: 0;
     padding: 0;
-    background-color: #1a1e2b; /* Темный фон */
-    color: #ffffff;
-    transition: background-color 1s ease-in-out;
+    box-sizing: border-box;
 }
 
-nav {
-    background-color: #333;
-    padding: 10px 20px;
-    text-align: center;
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #4b007d, #3b0a45, #4b0082);
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Шапка */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    transition: color 0.3s;
+    font-weight: 600;
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #9b2d5b; /* Цвет при наведении */
+    color: #8a2be2;
+    transform: scale(1.2);
 }
 
-/* Стиль для разделов */
+/* Секции */
 section {
-    padding: 50px;
-    margin: 20px 0;
-    background-color: #2d3a4f; /* Темный синий для разделов */
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.5s ease-out;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-section:hover {
-    background-color: #3a4751; /* Цвет при наведении */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Плавное появление элементов */
-.fade-in {
+/* Секция Обо мне */
+#about {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#about h1 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+}
+
+/* Секция Социальные сети */
+#socials {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#socials h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#socials p {
+    font-size: 18px;
+}
+
+/* Секция Проекты */
+#projects {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#projects h2 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Секция Контакты */
+#contact {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#contact h2 {
+    color: #fff;
+    font-size: 36px;
+}
+
+/* Подвал */
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+footer p {
+    font-family: 'Russo One', sans-serif;
+    font-size: 18px;
+}
+
+.footer-line {
+    height: 2px;
+    background: #8a2be2;
+    margin-bottom: 10px;
+}
+
+/* Анимации */
+h1, h2, p {
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
+    animation: fadeIn 1.5s forwards;
 }
 
-/* Когда элемент становится видимым */
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+h1 {
+    animation-delay: 0.3s;
 }
 
-/* Стиль для кнопок */
-button {
-    background-color: #9b2d5b;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1.2em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+h2 {
+    animation-delay: 0.5s;
 }
 
-button:hover {
-    transform: scale(1.05);
+p {
+    animation-delay: 0.7s;
+}
+
+/* Прокрутка с эффектом */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Анимация наведения на кнопку */
+nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
