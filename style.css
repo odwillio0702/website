@@ -1,40 +1,25 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Мой сайт</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Видео с анимационным фоном -->
-    <div class="background-video">
-        <video autoplay muted loop id="background-video">
-            <source src="https://cdn.pixabay.com/vimeo/110790/sakura-flowers-spring-nature-japan-110790.mp4" type="video/mp4">
-            Ваш браузер не поддерживает видео тег.
-        </video>
-    </div>
+/* Основные стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+}
 
-    <div class="content">
-        <!-- Заголовок сайта -->
-        <header>
-            <h1>Добро пожаловать на мой сайт</h1>
-        </header>
+/* Видео с фоном */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
-        <!-- Кнопки для навигации -->
-        <section class="buttons">
-            <button class="btn animate">Социальные сети</button>
-            <button class="btn animate">Проекты</button>
-            <button class="btn animate">Контакты</button>
-        </section>
-
-        <!-- Подвал с логотипом Optimus Gang -->
-        <footer>
-            <p class="optimus-gang">Optimus Gang</p>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+#background-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
