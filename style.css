@@ -1,184 +1,78 @@
-/* Сброс стилей */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Основные стили для страницы */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1e1e1e; /* Темный фон */
-    color: #fff;
-    line-height: 1.6;
-}
-
-/* Контейнер */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 30px; /* Закругления на углах */
-    background: rgba(28, 40, 51, 0.9);
-}
-
-/* Шапка сайта */
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-header h1 {
-    font-size: 3rem;
-    color: #8e44ad; /* Цвет для заголовка */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #bdc3c7;
-}
-
-/* Навигация */
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #ecf0f1;
-    font-size: 1.2rem;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover {
-    color: #8e44ad;
-    transform: scale(1.1);
-}
-
-/* Разделы */
-.section {
-    margin-bottom: 40px;
-}
-
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #8e44ad;
-}
-
-.section p {
-    font-size: 1.1rem;
-    color: #bdc3c7;
-}
-
-/* Социальные ссылки */
-.social-links {
-    list-style: none;
-    padding: 0;
-}
-
-.social-links li {
-    margin: 10px 0;
-}
-
-.social-links li a {
-    text-decoration: none;
-    color: #8e44ad;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.social-links li a:hover {
-    color: #ecf0f1;
-}
-
-/* Подвал */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #2c3e50;
-    position: relative;
-    margin-top: 50px;
-    border-radius: 10px;
-}
-
-footer p {
-    font-size: 2rem;
-    color: #fff;
-    font-weight: bold;
-    font-family: 'Russo One', sans-serif; /* Шрифт для "Optimus Gang" */
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-/* Анимация звездного неба */
-.stars, .stars2, .stars3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: -1;
-}
-
-.stars {
-    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-    animation: moveStars 300s linear infinite;
-}
-
-.stars2 {
-    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-    animation: moveStars 500s linear infinite;
-    opacity: 0.5;
-}
-
-.stars3 {
-    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-    animation: moveStars 700s linear infinite;
-    opacity: 0.2;
-}
-
-@keyframes moveStars {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-/* Эффект звездного неба */
-@keyframes moveStars {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-50%, -50%);
-    }
-  }
-  
-  body {
     margin: 0;
     padding: 0;
     overflow: hidden;
     background: #01042a; /* Цвет ночного неба */
     height: 100vh;
-    position: relative;
     font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   
+  /* Стили для блока с контентом */
+  .container {
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  /* Заголовки */
+  h1, h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Стили для кнопок */
+  a {
+    display: inline-block;
+    background-color: #4b3f72; /* Тёмно-фиолетовый */
+    color: #fff;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin: 10px 20px;
+    border-radius: 50px; /* Круглые углы */
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Анимация кнопок */
+  a:hover {
+    transform: scale(1.1); /* Увеличение кнопки */
+    background-color: #6c4a8c; /* Более светлый оттенок фиолетового */
+  }
+  
+  /* Стили для навигации */
+  nav {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+  }
+  
+  /* Эффект при наведении на ссылки в меню */
+  nav a:hover {
+    border-color: #4b3f72;
+  }
+  
+  /* Эффект звездного неба */
   .stars {
     position: absolute;
     top: 0;
@@ -209,6 +103,15 @@ footer p {
     }
     100% {
       transform: translate(-100%, -100%);
+    }
+  }
+  
+  @keyframes moveStars {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-50%, -50%);
     }
   }
   
