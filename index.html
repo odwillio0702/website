@@ -1,66 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анимированный фон</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        /* Видео, которое будет фоном */
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            object-fit: cover; /* Обеспечивает масштабирование видео */
-        }
-
-        /* Контент, который будет поверх видео */
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 2em;
-            text-align: center;
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 2s ease-in-out;
-        }
-
-        /* Стиль для анимации текста */
-        .show {
-            opacity: 1;
-        }
-    </style>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Fullscreen Video</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Вставка видео как фон -->
-    <video class="video-background" autoplay muted loop>
-        <source src="https://cdn.pixabay.com/vimeo/218728343/20220626_215410-2.mp4?alt=media&token=b3e9f33f-cfcb-47c4-8772-d845e88e72f4" type="video/mp4">
-        Ваш браузер не поддерживает видео.
-    </video>
+   <video autoplay muted loop id="myVideo">
+      <source src="video/2910042-hd_2048_1080_24fps.mp4" type="video/mp4">
+   </video>
 
-    <!-- Контент сайта -->
-    <div class="content" id="content">
-        <h1>Привет! Это мой сайт с анимированным фоном</h1>
-        <p>Тут можно добавить свой контент.</p>
-    </div>
-
-    <script>
-        // Добавляем анимацию для появления текста
-        window.onload = function() {
-            document.getElementById('content').classList.add('show');
-        };
-    </script>
+   <div class="content">
+      <h1>Heading</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, libero eligendi. Pariatur, ut ab ipsum eveniet ipsa quibusdam, minus perferendis voluptatibus quia repudiandae, in velit ullam totam recusandae rem sed.</p>
+      <!-- Use a button to pause/play the video with JavaScript -->
+      <button id="myBtn" onclick="myFunction()">Pause</button>
+   </div>
+   <script src="videoApp.js"></script>
 </body>
 </html>
