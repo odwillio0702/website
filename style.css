@@ -1,32 +1,35 @@
-/* Основные стили */
+/* Общие стили */
 body {
    margin: 0;
-   font-family: Arial, sans-serif;
-   background-color: #222;
-   color: white;
+   font-family: 'Arial', sans-serif;
+   color: #fff;
+   background: url('minecraft-background.jpg') no-repeat center center fixed;
+   background-size: cover;
    line-height: 1.6;
-   scroll-behavior: smooth;
+   text-align: center;
  }
  
  header {
-   background: #333;
-   padding: 15px;
-   text-align: center;
+   background: rgba(0, 0, 0, 0.8);
+   padding: 15px 0;
    position: sticky;
    top: 0;
    z-index: 1000;
  }
  
- header h1 {
-   margin: 0;
-   font-size: 2.5em;
-   color: limegreen;
+ header .logo img {
+   width: 150px;
+ }
+ 
+ nav {
+   margin-top: 10px;
  }
  
  nav a {
-   margin: 0 10px;
+   color: #fff;
    text-decoration: none;
-   color: white;
+   margin: 0 10px;
+   font-size: 1.2em;
    transition: color 0.3s;
  }
  
@@ -35,24 +38,21 @@ body {
  }
  
  .hero {
-   padding: 50px 20px;
-   text-align: center;
-   background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+   padding: 100px 20px;
+   background: rgba(0, 0, 0, 0.5);
  }
  
- .hero h2 {
-   font-size: 2.5em;
-   margin-bottom: 10px;
+ .hero h1 {
+   font-size: 3em;
  }
  
  .hero .button {
-   display: inline-block;
    margin-top: 20px;
    padding: 10px 20px;
    background: limegreen;
    color: black;
    text-decoration: none;
-   font-size: 1.2em;
+   font-size: 1.5em;
    transition: transform 0.3s;
  }
  
@@ -62,7 +62,14 @@ body {
  
  section {
    padding: 50px 20px;
-   text-align: center;
+ }
+ 
+ .news-item, .guide {
+   background: rgba(0, 0, 0, 0.8);
+   margin: 20px auto;
+   padding: 15px;
+   border-radius: 5px;
+   width: 70%;
  }
  
  .gallery {
@@ -73,8 +80,9 @@ body {
  }
  
  .gallery img {
-   width: 150px;
-   border: 2px solid limegreen;
+   width: 200px;
+   border: 3px solid limegreen;
+   border-radius: 5px;
    transition: transform 0.3s;
  }
  
@@ -82,23 +90,9 @@ body {
    transform: scale(1.1);
  }
  
- .guides {
-   display: flex;
-   justify-content: center;
-   gap: 20px;
- }
- 
- .guide {
-   background: #333;
-   padding: 20px;
-   border-radius: 5px;
-   width: 300px;
- }
- 
  footer {
-   background: #333;
+   background: rgba(0, 0, 0, 0.8);
    padding: 10px;
-   text-align: center;
-   margin-top: 50px;
+   font-size: 0.9em;
  }
  
