@@ -3,73 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мир Minecraft</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <title>Minecraft World</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script defer src="scripts/main.js"></script>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="minecraft-logo.png" alt="Minecraft Logo">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/minecraft-logo.png" alt="Minecraft Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="guides.html">Руководства</a></li>
+          <li><a href="profile.html">Профиль</a></li>
+          <li><a href="settings.html">Настройки</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <a href="#home">Главная</a>
-      <a href="#news">Новости</a>
-      <a href="#gallery">Галерея</a>
-      <a href="#guides">Руководства</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <h1>Добро пожаловать в мир Minecraft</h1>
-      <p>Построй свой уникальный мир и исследуй бесконечные просторы!</p>
-      <a href="#news" class="button">Узнать больше</a>
+    <section class="hero">
+      <h1>Добро пожаловать в мир Minecraft!</h1>
+      <p>Твори, исследуй и наслаждайся бесконечными возможностями игры!</p>
+      <a href="news.html" class="button">Узнать новости</a>
     </section>
 
-    <section id="news">
-      <h2>Новости Minecraft</h2>
-      <div class="news-item">
-        <h3>Новое обновление "Trails & Tales"</h3>
-        <p>Исследуй археологию, приручи верблюда и открывай новые блоки!</p>
+    <section class="features">
+      <h2>Что нового?</h2>
+      <div class="feature-list">
+        <div class="feature">
+          <img src="assets/gallery1.jpg" alt="Новое обновление">
+          <h3>Обновление 1.20</h3>
+          <p>Новые мобы, блоки и биомы уже здесь!</p>
+        </div>
+        <div class="feature">
+          <img src="assets/gallery2.jpg" alt="Исследования">
+          <h3>Археология</h3>
+          <p>Раскопки сокровищ с новыми инструментами.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/gallery3.jpg" alt="Приключения">
+          <h3>События</h3>
+          <p>Ежемесячные испытания и награды.</p>
+        </div>
       </div>
-      <div class="news-item">
-        <h3>Выбран новый моб: Краб</h3>
-        <p>Краб поможет поднимать предметы и украсит ваш мир!</p>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <h2>Галерея Minecraft</h2>
-      <div class="gallery">
-        <img src="minecraft-scene1.jpg" alt="Пейзаж Minecraft">
-        <img src="minecraft-scene2.jpg" alt="Крепость">
-        <img src="minecraft-scene3.jpg" alt="Постройка">
-      </div>
-    </section>
-
-    <section id="guides">
-      <h2>Полезные руководства</h2>
-      <div class="guide">
-        <h3>Как найти алмазы</h3>
-        <p>Алмазы можно найти на высотах от Y-58 до Y-60. Используйте кирку с зачарованием "Удача".</p>
-      </div>
-      <div class="guide">
-        <h3>Создание фермы</h3>
-        <p>Построй автоматическую ферму пшеницы с использованием раздатчиков и воды.</p>
-      </div>
-    </section>
-
-    <section id="contacts">
-      <h2>Контакты</h2>
-      <p>Посетите официальный сайт: <a href="https://www.minecraft.net" target="_blank">minecraft.net</a></p>
-      <p>Сообщество игроков: <a href="https://discord.com" target="_blank">Discord</a></p>
     </section>
   </main>
 
   <footer>
-    <p>Optimus gang © 2024</p>
+    <div class="footer-content">
+      <p>© 2024 Minecraft World. Все права защищены.</p>
+      <ul>
+        <li><a href="contact.html">Контакты</a></li>
+        <li><a href="settings.html">Настройки</a></li>
+        <li><a href="profile.html">Профиль</a></li>
+      </ul>
+    </div>
   </footer>
 </body>
 </html>

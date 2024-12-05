@@ -1,0 +1,18 @@
+/minecraft-site
+  ├── /assets
+  │    ├── minecraft-logo.png
+  │    ├── minecraft-background.jpg
+  │    ├── gallery1.jpg
+  │    ├── gallery2.jpg
+  │    ├── ...
+  ├── /scripts
+  │    └── main.js
+  ├── /styles
+  │    └── main.css
+  ├── index.html
+  ├── news.html
+  ├── gallery.html
+  ├── guides.html
+  ├── contact.html
+  ├── profile.html
+  └── settings.html
