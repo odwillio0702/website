@@ -1,23 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Fullscreen Video</title>
-   <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мир Minecraft</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-   <video autoplay muted loop id="myVideo">
-      <source src="video/2910042-hd_2048_1080_24fps.mp4" type="video/mp4">
-   </video>
+  <header>
+    <h1>Мир Minecraft</h1>
+    <nav>
+      <a href="#home">Главная</a>
+      <a href="#news">Новости</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#guides">Руководства</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
 
-   <div class="content">
-      <h1>Heading</h1>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, libero eligendi. Pariatur, ut ab ipsum eveniet ipsa quibusdam, minus perferendis voluptatibus quia repudiandae, in velit ullam totam recusandae rem sed.</p>
-      <!-- Use a button to pause/play the video with JavaScript -->
-      <button id="myBtn" onclick="myFunction()">Pause</button>
-   </div>
-   <script src="videoApp.js"></script>
+  <main>
+    <section id="home" class="hero">
+      <h2>Построй свой мир</h2>
+      <p>Добро пожаловать в мир Minecraft – где возможно всё!</p>
+      <a href="#news" class="button">Начать</a>
+    </section>
+
+    <section id="news">
+      <h2>Новости</h2>
+      <article>
+        <h3>1.20 "Trails & Tales" – Новые блоки и моб!</h3>
+        <p>Исследуй новые биомы, изучай археологию и приручи верблюда!</p>
+      </article>
+      <article>
+        <h3>Майнкрафт Live – итоги голосования!</h3>
+        <p>Игроки выбрали нового моба – Краба!</p>
+      </article>
+    </section>
+
+    <section id="gallery">
+      <h2>Галерея</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/150" alt="Крепость">
+        <img src="https://via.placeholder.com/150" alt="Гора">
+        <img src="https://via.placeholder.com/150" alt="Ферма">
+      </div>
+    </section>
+
+    <section id="guides">
+      <h2>Руководства</h2>
+      <div class="guides">
+        <div class="guide">
+          <h3>Как построить ферму?</h3>
+          <p>Руководство по автоматической ферме пшеницы.</p>
+        </div>
+        <div class="guide">
+          <h3>Где искать алмазы?</h3>
+          <p>Обзор самых эффективных способов добычи алмазов.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <p>Официальный сайт: <a href="https://www.minecraft.net" target="_blank">minecraft.net</a></p>
+      <p>Сообщество: <a href="https://discord.com" target="_blank">Discord</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Optimus gang © 2024</p>
+  </footer>
 </body>
 </html>
